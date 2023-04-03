@@ -2,19 +2,35 @@ package;
 
 import flixel.FlxBasic;
 import flixel.FlxG;
-
 import openfl.events.NetStatusEvent;
 import openfl.media.Video;
 import openfl.net.NetConnection;
 import openfl.net.NetStream;
 
 typedef FlxVideoOptions = {
+	/**
+	 * Path to video
+	 */
 	final source: String;
+	/**
+	 * x Position of the video. Defaults to 0
+	 */
 	final ?x: Float;
+	/**
+	 * y Position of the video. Defaults to 0
+	 */
 	final ?y: Float;
+	/**
+	 * width of the video. Defaults to 1280
+	 */
 	final ?width: Int;
+	/**
+	 * height of the video. Defaults to 720
+	 */
 	final ?height: Int;
-	final ?smoothing: Bool;
+	/**
+	 * Indicates if video should play automatically. Set to false by default
+	 */
 	final ?autoplay: Bool;
 }
 
@@ -37,7 +53,6 @@ class FlxVideo extends FlxBasic {
 
 		video.x = options.x != null ? options.x : 0;
 		video.y = options.y != null ? options.y : 0;
-		video.smoothing = options.smoothing || true;
 
 		FlxG.addChildBelowMouse(video);
 
