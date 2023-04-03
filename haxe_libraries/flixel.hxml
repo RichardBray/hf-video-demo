@@ -1,0 +1,4 @@
+# @install: lix --silent download "haxelib:/flixel#5.2.2" into flixel/5.2.2/haxelib
+# @run: haxelib run-dir flixel "${HAXE_LIBCACHE}/flixel/5.2.2/haxelib"
+-cp ${HAXE_LIBCACHE}/flixel/5.2.2/haxelib/
+-D flixel=5.2.2
